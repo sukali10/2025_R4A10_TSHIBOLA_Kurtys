@@ -9,7 +9,7 @@ module.exports = {
     - Sinon, ajouter simplement le nombre au tableau
   Renvoyer le tableau final.
 */
-  F1() {
+  F1()  {
 
   },
 };
