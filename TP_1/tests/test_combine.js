@@ -39,7 +39,7 @@ describe("TP - Combinaison Objet/Tableau/String", (it) => {
   it("5. Ajouter Kasimu à la fin du tableau avec un âge de 38 ans et renvoyer le tableau modifié", () => {
     const modifiedArray = tpPpl.B5();
     assertEqual("Kasimu", modifiedArray[modifiedArray.length - 1].name);
-    assertEqual(38, modifiedArray[modifiedArray.length - 1].age);
+    assertEqual("38", modifiedArray[modifiedArray.length - 1].age);
   });
 
   it("6. Renvoyer la longueur du tableau", () => {

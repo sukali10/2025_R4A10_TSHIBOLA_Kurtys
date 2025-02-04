@@ -9,7 +9,25 @@ module.exports = {
     - Sinon, ajouter simplement le nombre au tableau
   Renvoyer le tableau final.
 */
-  F1()  {
 
+  F1() {
+    let tableau = [];
+    for(let i=1; i<=35;i++){
+      if(i%3 == 0 && i%5 ==0){
+        tableau.push("Python");
+
+      }
+      else if(i%5 == 0){
+        tableau.push("TypeScript");
+      }
+      else if(i%3 == 0 ){
+        tableau.push("JavaScript");
+      }else{
+        tableau.push(i);
+      }
+    }
+    return tableau;
   },
 };
+
+console.log(module.exports.F1());
