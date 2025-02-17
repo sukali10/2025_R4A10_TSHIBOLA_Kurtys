@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common'; 
 
-// Définition de l'interface pour typer les témoignages
 interface Testimonial {
   image: string;
   name: string;
@@ -17,7 +16,6 @@ interface Testimonial {
   imports: [CommonModule], 
 })
 export class TestimonialComponent {
-  // Liste des témoignages typée
   testimonials: Testimonial[] = [
     {
       image: 'lego_1.jpg', 
@@ -39,20 +37,17 @@ export class TestimonialComponent {
     }
   ];
 
-  // Index du témoignage affiché
+
   currentIndex: number = 0;
 
-  // Getter typé pour récupérer le témoignage actuel
   get currentTestimonial(): Testimonial {
     return this.testimonials[this.currentIndex];
   }
 
-  // Méthode pour passer au témoignage suivant
   nextTestimonial(): void {
     this.currentIndex = (this.currentIndex + 1) % this.testimonials.length;
   }
 
-  // Méthode pour revenir au témoignage précédent
   prevTestimonial(): void {
     this.currentIndex = (this.currentIndex - 1 + this.testimonials.length) % this.testimonials.length;
   }

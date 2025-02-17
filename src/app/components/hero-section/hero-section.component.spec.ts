@@ -17,7 +17,7 @@ describe('HeroSectionComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('creer', () => {
     expect(component).toBeTruthy();
   });
 });

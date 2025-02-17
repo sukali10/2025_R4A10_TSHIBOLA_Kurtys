@@ -4,26 +4,27 @@ import { AppComponent } from './app.component';
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AppComponent],
+      declarations: [AppComponent],
     }).compileComponents();
   });
 
-  it('should create the app', () => {
+  it('devrait créer l application', () => {
     const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app).toBeTruthy();
+    const appInstance = fixture.componentInstance;
+    expect(appInstance).toBeTruthy();
   });
 
-  it(`should have the 'angularTP2siteweb' title`, () => {
+  it('doit avoir le titre "tp2_ang"', () => {
     const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('angularTP2siteweb');
+    const appInstance = fixture.componentInstance;
+    expect(appInstance.title).toBe('tp2_ang');
   });
 
-  it('should render title', () => {
+  it('doit afficher le titre dans un élément h1', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, angularTP2siteweb');
+    const titleElement = compiled.querySelector('h1');
+    expect(titleElement?.textContent).toContain('Hello, tp2_ang');
   });
 });
